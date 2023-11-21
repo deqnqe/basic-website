@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+</head>
+<body>
+    <h2>Caregiver dashboard</h2>
+    <ul>
+        <li>
+            {{ user.given_name }} {{ user.surname }}
+            <a href="{{ url_for('update_user', user_id=user.user_id) }}">Update</a>
+        </li>
+    </ul>
+    <a href="{{ url_for('logout_user') }}">Logout</a>
+</body>
+</html>

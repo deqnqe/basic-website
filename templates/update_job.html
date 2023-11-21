@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head content -->
+</head>
+
+<body>
+    <h2>Update Job</h2>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <form action="{{ url_for('update_job', job_id=job.job_id) }}" method="post">
+        <label for="required_caregiving_type">Required Caregiving Type:</label>
+        <input type="text" id="required_caregiving_type" name="required_caregiving_type" value="{{ job.required_caregiving_type }}" required>
+
+        <label for="other_requirements">Other Requirements:</label>
+        <textarea id="other_requirements" name="other_requirements" required>{{ job.other_requirements }}</textarea>
+
+        <button type="submit">Update Job</button>
+    </form>
+</body>
+
+</html>

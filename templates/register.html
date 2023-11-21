@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form method="post" action="/register">
+        <label for="username">Username (Email):</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="name">Given Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+
+        <label for="profile_description">Profile Description:</label>
+        <textarea id="profile_description" name="profile_description" rows="4" required></textarea>
+
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+            <option value="family">Family</option>
+            <option value="caregiver">Caregiver</option>
+        </select>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
